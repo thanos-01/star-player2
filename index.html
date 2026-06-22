@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Star Player 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <canvas id="animationCanvas" aria-label="Canvas de animação"></canvas>
+
+    <div class="controls" role="region" aria-label="Controles de reprodução">
+      <div class="playback">
+        <button id="btnPlay" class="btn" title="Play/Pause" aria-pressed="false">
+          <svg viewBox="0 0 24 24" id="iconPlay"><path d="M8 5v14l11-7z"></path></svg>
+          <svg viewBox="0 0 24 24" id="iconPause" style="display:none"><path d="M6 19h4V5H6zm8-14v14h4V5z"></path></svg>
+        </button>
+        <button id="btnLoop" class="btn toggle" title="Loop">
+          <svg viewBox="0 0 24 24"><path d="M7 7h11v3l4-4-4-4v3H6c-1.1 0-2 .9-2 2v6h2zM17 17H6v-3l-4 4 4 4v-3h12c1.1 0 2-.9 2-2v-6h-2v6c0 1.1-.9 2-2 2z"></path></svg>
+        </button>
+        <button id="btnReset" class="btn" title="Reiniciar" aria-label="Reiniciar animação">
+          <svg viewBox="0 0 24 24"><path d="M12 5V1L8 5l4 4V6c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6h-2c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"></path></svg>
+        </button>
+      </div>
+      <div class="speeds" aria-label="Velocidade de reprodução">
+        <button class="btn velocidade" data-speed="0.25">0.25x</button>
+        <button class="btn velocidade" data-speed="0.5">0.5x</button>
+        <button class="btn velocidade active" data-speed="1">1x</button>
+        <button class="btn velocidade" data-speed="5">5x</button>
+        <button class="btn velocidade" data-speed="100">100x</button>
+      </div>
+      <div class="scene-info">
+        <div id="sceneLabel" class="scene-label">Nenhuma cena</div>
+        <div id="timeLabel" class="time-label">t = 0.00 s</div>
+      </div>
+      <div class="scenes" aria-label="Cenas">
+        <button data-scene="planckTime" class="btn scene-btn active">Planck Time</button>
+        <button data-scene="solarSystemScale" class="btn scene-btn">Sistema Solar</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
